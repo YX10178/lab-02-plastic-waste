@@ -1,0 +1,70 @@
+---
+title: "Lab 02 - Plastic waste"
+author: "Yuxin Xie"
+date: "1/28/2025"
+output: github_document
+---
+
+## Load packages and data
+
+```{r load-packages, message=FALSE}
+library(tidyverse) 
+```
+
+```{r load-data, message=FALSE}
+plastic_waste <- read.csv("data/plastic-waste.csv")
+```
+
+## Exercises
+
+### Exercise 1
+
+#
+
+```{r plastic-waste-continent}
+
+```
+
+### Exercise 2
+
+```{r plastic-waste-density}
+
+```
+
+### Exercise 3
+
+#
+
+```{r plastic-waste-violin}
+
+```
+
+### Exercise 4
+
+#
+
+```{r plastic-waste-mismanaged}
+
+```
+
+```{r plastic-waste-mismanaged-continent}
+
+```
+
+```{r plastic-waste-population-total}
+
+```
+
+```{r plastic-waste-population-coastal}
+
+```
+
+### Exercise 5
+
+#
+
+```{r recreate-viz}
+
+```
+
+
