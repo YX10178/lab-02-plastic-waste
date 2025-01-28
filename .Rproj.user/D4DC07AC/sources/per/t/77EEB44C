@@ -3,9 +3,9 @@
     "path": "~/Desktop/datascience/lab-02-plastic-waste/lab-02.Rmd",
     "project_path": "lab-02.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "24520621",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1738101574665.0,
     "source_on_save": false,
     "relative_order": 1,
@@ -16,11 +16,11 @@
         "scrollLine": "52"
     },
     "folds": "",
-    "lastKnownWriteTime": 1738101395,
+    "lastKnownWriteTime": 1738101838,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1738101662733,
+    "last_content_update": 1738101838321,
     "read_only": false,
     "read_only_alternatives": []
 }
