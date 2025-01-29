@@ -223,4 +223,17 @@ ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = coastal_pop)) +
 
 ### Exercise 5
 
-# 
+``` r
+ggplot(data = filter(plastic_waste, plastic_waste_per_cap < 3.5), aes(x = coastal_pop/total_pop, y = plastic_waste_per_cap, color = continent)) +
+  geom_point()  + labs (title = "Plastic waste vs. coastal population proportion", subtitle = "by continent", x= "Coastal population proportion (Coastal/total population)", y = "Plastic waste per capita") + geom_smooth(color = "black") + scale_color_viridis_d () 
+```
+
+    ## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
+    ## Warning: Removed 10 rows containing non-finite outside the scale range
+    ## (`stat_smooth()`).
+
+    ## Warning: Removed 10 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/recreate-viz-1.png)<!-- -->
