@@ -1,0 +1,1 @@
+"0","ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +    facet_wrap(~continent) + geom_histogram(binwidth = 0.2) "
