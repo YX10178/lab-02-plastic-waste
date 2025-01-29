@@ -1,0 +1,2 @@
+"0","ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap, color = continent)) +"
+"0","  geom_point()"

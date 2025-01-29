@@ -139,13 +139,87 @@ geom. that is because color and fill vary based on continent data. Each
 continent is assigned a unique color and fill. the alpha level is
 uniform across all continents.
 
+``` r
+ggplot(
+  data = plastic_waste,
+  mapping = aes(
+    x = continent,
+    y = plastic_waste_per_cap
+  )
+) +
+  geom_boxplot()
+```
+
+    ## Warning: Removed 51 rows containing non-finite outside the scale range
+    ## (`stat_boxplot()`).
+
+![](lab-02_files/figure-gfm/another%20way-1.png)<!-- -->
+
 ### Exercise 3
 
-# 
+``` r
+ggplot(
+  data = plastic_waste,
+  mapping = aes(
+    x = continent,
+    y = plastic_waste_per_cap
+  )
+) +
+  geom_violin()
+```
+
+    ## Warning: Removed 51 rows containing non-finite outside the scale range
+    ## (`stat_ydensity()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-violin-1.png)<!-- --> \### the
+width of the violin varies, which represents the density.
 
 ### Exercise 4
 
-# 
+``` r
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap)) +
+  geom_point()
+```
+
+    ## Warning: Removed 51 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-mismanaged-1.png)<!-- --> \##
+there seems to be a weak positive relationship between plastic waste per
+capita and mismanaged plastic waste per capita
+
+``` r
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap, color = continent)) +
+  geom_point()
+```
+
+    ## Warning: Removed 51 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/colored-plastic-waste-mismanaged-continent-1.png)<!-- -->
+\### there is no absolute separation between continents. Africa appears
+to show a clearer positive pattern, while Europe seems more scattered.
+
+``` r
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = total_pop)) +
+  geom_point()
+```
+
+    ## Warning: Removed 61 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-population-total-1.png)<!-- -->
+
+``` r
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = coastal_pop)) +
+  geom_point()
+```
+
+    ## Warning: Removed 51 rows containing missing values or values outside the scale range
+    ## (`geom_point()`).
+
+![](lab-02_files/figure-gfm/plastic-waste-population-coastal-1.png)<!-- -->
+\###Neither pair of variables shows a strong linear relationship.
 
 ### Exercise 5
 

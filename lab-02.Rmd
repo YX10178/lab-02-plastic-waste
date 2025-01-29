@@ -93,33 +93,55 @@ ggplot(
 ```
 # we defined the color and fill of the curves by mapping aesthetics of the plot but we defined the alpha level as a characteristic of the plotting geom. that is because color and fill vary based on continent data. Each continent is assigned a unique color and fill. the alpha level is uniform across all continents.
 
+```{r another way}
+ggplot(
+  data = plastic_waste,
+  mapping = aes(
+    x = continent,
+    y = plastic_waste_per_cap
+  )
+) +
+  geom_boxplot()
+```
+
 ### Exercise 3
 
-#
-
 ```{r plastic-waste-violin}
-
+ggplot(
+  data = plastic_waste,
+  mapping = aes(
+    x = continent,
+    y = plastic_waste_per_cap
+  )
+) +
+  geom_violin()
 ```
+### the width of the violin varies, which represents the density. 
 
 ### Exercise 4
 
-#
-
 ```{r plastic-waste-mismanaged}
-
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap)) +
+  geom_point()
 ```
+## there seems to be a weak positive relationship between plastic waste per capita and mismanaged plastic waste per capita
 
-```{r plastic-waste-mismanaged-continent}
-
+```{r colored-plastic-waste-mismanaged-continent}
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = mismanaged_plastic_waste_per_cap, color = continent)) +
+  geom_point()
 ```
+### there is no absolute separation between continents. Africa appears to show a clearer positive pattern, while Europe seems more scattered.
 
 ```{r plastic-waste-population-total}
-
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = total_pop)) +
+  geom_point()
 ```
 
 ```{r plastic-waste-population-coastal}
-
+ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap, y = coastal_pop)) +
+  geom_point()
 ```
+###Neither pair of variables shows a strong linear relationship. 
 
 ### Exercise 5
 
